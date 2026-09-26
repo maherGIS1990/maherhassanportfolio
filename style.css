@@ -1,4 +1,3 @@
-
 /* =========================================================
    MAHER HASSAN GIS PORTFOLIO
    ========================================================= */
@@ -57,6 +56,40 @@ button {
 .container {
     width: min(92%, var(--container));
     margin: auto;
+}
+
+
+/* ================= ACCESSIBILITY ================= */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 12px;
+    z-index: 2000;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    background: var(--primary);
+    color: white;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+/* Visible keyboard focus everywhere a person can tab to */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 
@@ -1022,6 +1055,24 @@ footer {
 }
 
 
+/* ================= SCROLL REVEAL ================= */
+/* Paired with the IntersectionObserver in script.js — without these
+   two rules, the "reveal"/"visible" classes it adds have no effect. */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 950px) {
@@ -1149,6 +1200,38 @@ footer {
 
     .map-area {
         height: 300px;
+    }
+
+}
+
+
+/* ================= REDUCED MOTION ================= */
+/* Respect the OS-level "reduce motion" preference: no smooth-scroll,
+   no scroll-reveal animation, no hover lift transforms. */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    .about-card:hover,
+    .skill-card:hover,
+    .project-card:hover,
+    .map-placeholder:hover,
+    .btn-primary:hover {
+        transform: none;
     }
 
 }

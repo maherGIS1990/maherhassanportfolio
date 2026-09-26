@@ -1,14 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#087f8c">
 
     <title>Maher Hassan | GIS Analyst & GeoAI Specialist</title>
 
     <meta name="description"
           content="Maher Hassan GIS portfolio — GIS Analyst, ArcGIS Pro, QGIS, Python, GeoAI, Spatial Data Science, Remote Sensing and Geospatial Automation.">
+    <meta name="author" content="Maher Hassan">
+
+    <!-- Open Graph / social sharing preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Maher Hassan | GIS Analyst & GeoAI Specialist">
+    <meta property="og:description" content="GIS Analyst specializing in ArcGIS Pro, QGIS, Python automation, remote sensing and GeoAI.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maher Hassan | GIS Analyst & GeoAI Specialist">
+    <meta name="twitter:description" content="GIS Analyst specializing in ArcGIS Pro, QGIS, Python automation, remote sensing and GeoAI.">
+    <!-- TODO once the site is live: add og:url and og:image (1200x630), and a rel="canonical" link -->
+
+    <!-- Favicon: simple "MH" monogram in brand colors, no external file needed -->
+    <link rel="icon" type="image/svg+xml"
+          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23071820'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='24' font-weight='800' fill='%2320c997' text-anchor='middle'%3EMH%3C/text%3E%3C/svg%3E">
 
     <link rel="stylesheet" href="style.css">
 
@@ -20,14 +34,29 @@
     <!-- Icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Maher Hassan",
+        "jobTitle": "GIS Analyst & Geospatial Systems Specialist",
+        "description": "GIS Analyst specializing in ArcGIS Pro, QGIS, Python automation, remote sensing and GeoAI.",
+        "sameAs": [
+            "https://github.com/maherGIS1990",
+            "https://www.youtube.com/@maherhassan1990"
+        ]
+    }
+    </script>
 </head>
 
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- ================= NAVBAR ================= -->
-
 <header class="navbar">
-
     <div class="container nav-container">
 
         <a href="#home" class="logo">
@@ -35,48 +64,43 @@
             <span>Maher Hassan</span>
         </a>
 
-        <nav id="navMenu">
-
+        <nav id="navMenu" aria-label="Primary">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#maps">Maps</a>
             <a href="#contact">Contact</a>
-
         </nav>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
-            <i class="fa-solid fa-bars"></i>
+        <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
 
     </div>
-
 </header>
 
 
-<!-- ================= HERO ================= -->
+<main id="main-content">
 
+<!-- ================= HERO ================= -->
 <section id="home" class="hero">
 
-    <div class="hero-grid"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
 
     <div class="container hero-container">
 
         <div class="hero-content">
 
             <div class="status">
-                <span class="status-dot"></span>
+                <span class="status-dot" aria-hidden="true"></span>
                 GIS • GeoAI • Spatial Data Science
             </div>
 
-            <h1>
-                Maher Hassan
-            </h1>
+            <h1>Maher Hassan</h1>
 
-            <h2>
-                GIS Analyst &amp; Geospatial Systems Specialist
-            </h2>
+            <h2>GIS Analyst &amp; Geospatial Systems Specialist</h2>
 
             <p class="hero-text">
                 Building practical geospatial solutions through GIS,
@@ -85,47 +109,38 @@
             </p>
 
             <div class="hero-buttons">
-
                 <a href="#projects" class="btn btn-primary">
-                    <i class="fa-solid fa-map-location-dot"></i>
+                    <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
                     Explore Projects
                 </a>
-
                 <a href="#contact" class="btn btn-secondary">
                     Contact Me
                 </a>
-
             </div>
 
             <div class="hero-stats">
-
                 <div>
                     <strong>15+</strong>
                     <span>Years GIS Experience</span>
                 </div>
-
                 <div>
                     <strong>GIS</strong>
                     <span>Analysis &amp; Mapping</span>
                 </div>
-
                 <div>
                     <strong>GeoAI</strong>
                     <span>Automation &amp; Innovation</span>
                 </div>
-
             </div>
 
         </div>
 
-
-        <div class="hero-visual">
-
+        <!-- Decorative illustration only — not real map data -->
+        <div class="hero-visual" aria-hidden="true">
             <div class="map-card">
 
                 <div class="map-toolbar">
                     <span><i class="fa-solid fa-layer-group"></i> GIS Workspace</span>
-
                     <div>
                         <span class="map-dot"></span>
                         <span class="map-dot"></span>
@@ -134,7 +149,6 @@
                 </div>
 
                 <div class="map-area">
-
                     <div class="map-grid"></div>
 
                     <div class="route route-1"></div>
@@ -149,7 +163,6 @@
                     <div class="map-label label-1">GIS</div>
                     <div class="map-label label-2">GeoAI</div>
                     <div class="map-label label-3">Spatial Data</div>
-
                 </div>
 
                 <div class="map-footer">
@@ -158,157 +171,115 @@
                 </div>
 
             </div>
-
         </div>
 
     </div>
-
 </section>
 
 
 <!-- ================= ABOUT ================= -->
-
 <section id="about" class="section">
-
     <div class="container">
 
         <div class="section-heading">
-
             <span class="eyebrow">ABOUT ME</span>
-
-            <h2>
-                Turning geographic data into useful information
-            </h2>
-
+            <h2>Turning geographic data into useful information</h2>
             <p>
                 GIS professional focused on solving real-world spatial
                 problems through analysis, mapping, automation and
                 geospatial technologies.
             </p>
-
         </div>
-
 
         <div class="about-grid">
 
             <div class="about-card">
-
-                <div class="icon-box">
-                    <i class="fa-solid fa-globe"></i>
-                </div>
-
+                <div class="icon-box"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
                 <h3>GIS &amp; Spatial Analysis</h3>
-
                 <p>
                     Spatial databases, cartography, geoprocessing,
                     network analysis, spatial relationships and
                     geographic data management.
                 </p>
-
             </div>
 
-
             <div class="about-card">
-
-                <div class="icon-box">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-
+                <div class="icon-box"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
                 <h3>Automation &amp; Python</h3>
-
                 <p>
                     Automating repetitive GIS workflows using Python,
                     ArcPy, PyQGIS and custom geospatial tools.
                 </p>
-
             </div>
 
-
             <div class="about-card">
-
-                <div class="icon-box">
-                    <i class="fa-solid fa-brain"></i>
-                </div>
-
+                <div class="icon-box"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
                 <h3>GeoAI</h3>
-
                 <p>
                     Exploring the intersection of artificial intelligence,
                     spatial data, remote sensing and GIS automation.
                 </p>
-
             </div>
 
         </div>
-
     </div>
-
 </section>
 
 
 <!-- ================= SKILLS ================= -->
-
 <section id="skills" class="section section-dark">
-
     <div class="container">
 
         <div class="section-heading">
-
             <span class="eyebrow">TECHNOLOGY</span>
-
             <h2>GIS Technology Stack</h2>
-
             <p>
                 Tools and technologies used for geospatial analysis,
                 mapping, automation and data science.
             </p>
-
         </div>
-
 
         <div class="skills-grid">
 
             <div class="skill-card">
-                <i class="fa-solid fa-earth-americas"></i>
+                <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
                 <h3>ArcGIS Pro</h3>
                 <p>Advanced GIS, geoprocessing, cartography and automation.</p>
             </div>
 
             <div class="skill-card">
-                <i class="fa-solid fa-map"></i>
+                <i class="fa-solid fa-map" aria-hidden="true"></i>
                 <h3>QGIS</h3>
                 <p>Open-source GIS, processing, plugins and spatial analysis.</p>
             </div>
 
             <div class="skill-card">
-                <i class="fa-brands fa-python"></i>
+                <i class="fa-brands fa-python" aria-hidden="true"></i>
                 <h3>Python</h3>
                 <p>Geospatial automation, data processing and analysis.</p>
             </div>
 
             <div class="skill-card">
-                <i class="fa-solid fa-robot"></i>
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
                 <h3>GeoAI</h3>
                 <p>AI-assisted spatial workflows and geospatial intelligence.</p>
             </div>
 
             <div class="skill-card">
-                <i class="fa-solid fa-satellite"></i>
+                <i class="fa-solid fa-satellite" aria-hidden="true"></i>
                 <h3>Remote Sensing</h3>
                 <p>Earth observation, imagery and spatial analysis.</p>
             </div>
 
             <div class="skill-card">
-                <i class="fa-solid fa-database"></i>
+                <i class="fa-solid fa-database" aria-hidden="true"></i>
                 <h3>Spatial Data</h3>
                 <p>Geodatabases, spatial datasets and data management.</p>
             </div>
 
         </div>
 
-
         <div class="technology-tags">
-
             <span>ArcGIS Pro</span>
             <span>QGIS</span>
             <span>ArcPy</span>
@@ -321,363 +292,248 @@
             <span>Remote Sensing</span>
             <span>Spatial Data Science</span>
             <span>GeoAI</span>
-
         </div>
 
     </div>
-
 </section>
 
 
 <!-- ================= PROJECTS ================= -->
-
 <section id="projects" class="section">
-
     <div class="container">
 
         <div class="section-heading">
-
             <span class="eyebrow">SELECTED WORK</span>
-
             <h2>Featured GIS Projects</h2>
-
-            <p>
-                A selection of practical geospatial projects and workflows.
-            </p>
-
+            <p>A selection of practical geospatial projects and workflows.</p>
         </div>
-
 
         <div class="projects-grid">
 
             <article class="project-card">
-
-                <div class="project-image project-afif">
+                <div class="project-image project-afif" aria-hidden="true">
                     <span class="project-category">GIS • Surveying</span>
                 </div>
-
                 <div class="project-content">
-
                     <h3>Afif GIS &amp; Survey Control Network</h3>
-
                     <p>
                         GIS-based evaluation and planning of elevation
                         control points and proposed additional points
                         for geographic coverage.
                     </p>
-
                     <div class="project-tags">
                         <span>GIS</span>
                         <span>UTM</span>
                         <span>Surveying</span>
                         <span>Spatial Analysis</span>
                     </div>
-
+                    <!-- TODO: replace with a real project page or write-up link -->
                     <a href="#" class="project-link">
-                        View Project <i class="fa-solid fa-arrow-right"></i>
+                        View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
-
                 </div>
-
             </article>
 
-
             <article class="project-card">
-
-                <div class="project-image project-geoai">
+                <div class="project-image project-geoai" aria-hidden="true">
                     <span class="project-category">GeoAI</span>
                 </div>
-
                 <div class="project-content">
-
                     <h3>GeoAI &amp; GIS Automation</h3>
-
                     <p>
                         Concept and workflows for integrating artificial
                         intelligence with GIS analysis and geospatial
                         automation.
                     </p>
-
                     <div class="project-tags">
                         <span>GeoAI</span>
                         <span>Python</span>
                         <span>Automation</span>
                         <span>AI</span>
                     </div>
-
                     <a href="#" class="project-link">
-                        View Project <i class="fa-solid fa-arrow-right"></i>
+                        View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
-
                 </div>
-
             </article>
 
-
             <article class="project-card">
-
-                <div class="project-image project-qgis">
+                <div class="project-image project-qgis" aria-hidden="true">
                     <span class="project-category">QGIS • Python</span>
                 </div>
-
                 <div class="project-content">
-
                     <h3>Custom QGIS Tools</h3>
-
                     <p>
                         Development of custom QGIS plugins and tools for
                         editing, quality control, numbering and spatial
                         workflows.
                     </p>
-
                     <div class="project-tags">
                         <span>QGIS</span>
                         <span>PyQGIS</span>
                         <span>Plugins</span>
                         <span>QC</span>
                     </div>
-
                     <a href="#" class="project-link">
-                        View Project <i class="fa-solid fa-arrow-right"></i>
+                        View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
-
                 </div>
-
             </article>
 
-
             <article class="project-card">
-
-                <div class="project-image project-spatial">
+                <div class="project-image project-spatial" aria-hidden="true">
                     <span class="project-category">Spatial Data Science</span>
                 </div>
-
                 <div class="project-content">
-
                     <h3>Spatial Data Science</h3>
-
                     <p>
                         Spatial data exploration, analysis and visualization
                         using modern Python geospatial technologies.
                     </p>
-
                     <div class="project-tags">
                         <span>Python</span>
                         <span>GeoPandas</span>
                         <span>Data Science</span>
                         <span>Maps</span>
                     </div>
-
                     <a href="#" class="project-link">
-                        View Project <i class="fa-solid fa-arrow-right"></i>
+                        View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
-
                 </div>
-
             </article>
 
         </div>
-
     </div>
-
 </section>
 
 
 <!-- ================= MAPS ================= -->
-
 <section id="maps" class="section section-light">
-
     <div class="container">
 
         <div class="section-heading">
-
             <span class="eyebrow">CARTOGRAPHY</span>
-
             <h2>Maps &amp; Visualizations</h2>
-
             <p>
                 Selected maps and cartographic work. Replace these
                 placeholders with your actual GIS maps.
             </p>
-
         </div>
 
-
         <div class="maps-grid">
-
             <div class="map-placeholder">
-                <i class="fa-solid fa-map"></i>
+                <i class="fa-solid fa-map" aria-hidden="true"></i>
                 <span>Map 01</span>
             </div>
-
             <div class="map-placeholder">
-                <i class="fa-solid fa-map-location-dot"></i>
+                <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
                 <span>Map 02</span>
             </div>
-
             <div class="map-placeholder">
-                <i class="fa-solid fa-earth-americas"></i>
+                <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
                 <span>Map 03</span>
             </div>
-
             <div class="map-placeholder">
-                <i class="fa-solid fa-chart-area"></i>
+                <i class="fa-solid fa-chart-area" aria-hidden="true"></i>
                 <span>Map 04</span>
             </div>
-
             <div class="map-placeholder">
-                <i class="fa-solid fa-route"></i>
+                <i class="fa-solid fa-route" aria-hidden="true"></i>
                 <span>Map 05</span>
             </div>
-
             <div class="map-placeholder">
-                <i class="fa-solid fa-layer-group"></i>
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
                 <span>Map 06</span>
             </div>
-
             <div class="map-placeholder">
-                <i class="fa-solid fa-location-crosshairs"></i>
+                <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
                 <span>Map 07</span>
             </div>
-
             <div class="map-placeholder">
-                <i class="fa-solid fa-satellite"></i>
+                <i class="fa-solid fa-satellite" aria-hidden="true"></i>
                 <span>Map 08</span>
             </div>
-
         </div>
 
     </div>
-
 </section>
 
 
 <!-- ================= KNOWLEDGE ================= -->
-
-<section class="section">
-
+<section class="section" aria-labelledby="knowledge-heading">
     <div class="container">
 
         <div class="knowledge">
 
             <div>
-
                 <span class="eyebrow">KNOWLEDGE SHARING</span>
-
-                <h2>
-                    GIS Education &amp; Content
-                </h2>
-
+                <h2 id="knowledge-heading">GIS Education &amp; Content</h2>
                 <p>
                     Sharing practical GIS knowledge through tutorials,
                     ArcGIS Pro workflows, QGIS techniques, spatial analysis
                     and geospatial technologies.
                 </p>
-
-                <a
-                    href="https://www.youtube.com/@maherhassan1990"
-                    target="_blank"
-                    rel="noopener"
-                    class="btn btn-primary">
-
-                    <i class="fa-brands fa-youtube"></i>
+                <a href="https://www.youtube.com/@maherhassan1990"
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
                     Visit YouTube Channel
-
                 </a>
-
             </div>
 
-
-            <div class="youtube-card">
-
+            <div class="youtube-card" aria-hidden="true">
                 <i class="fa-brands fa-youtube"></i>
-
                 <strong>GIS Tutorials</strong>
-
                 <span>ArcGIS Pro • QGIS • GIS Analysis</span>
-
             </div>
 
         </div>
-
     </div>
-
 </section>
 
 
 <!-- ================= CONTACT ================= -->
-
 <section id="contact" class="section contact-section">
-
     <div class="container">
 
         <div class="contact-box">
-
             <span class="eyebrow">GET IN TOUCH</span>
-
             <h2>Let's work with geospatial data</h2>
-
             <p>
                 For GIS projects, consulting, collaboration or
                 professional opportunities, feel free to connect.
             </p>
 
-
             <div class="contact-links">
-
-                <a href="https://github.com/maherGIS1990"
-                   target="_blank"
-                   rel="noopener">
-
-                    <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/maherGIS1990" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                     GitHub
-
                 </a>
-
-                <a href="https://www.youtube.com/@maherhassan1990"
-                   target="_blank"
-                   rel="noopener">
-
-                    <i class="fa-brands fa-youtube"></i>
+                <a href="https://www.youtube.com/@maherhassan1990" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
                     YouTube
-
                 </a>
-
-                <a href="https://wa.me/201552268273"
-                   target="_blank"
-                   rel="noopener">
-
-                    <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/201552268273" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                     WhatsApp
-
                 </a>
-
             </div>
-
         </div>
 
     </div>
-
 </section>
+
+</main>
 
 
 <!-- ================= FOOTER ================= -->
-
 <footer>
-
     <div class="container footer-content">
-
         <div>
             <strong>Maher Hassan</strong>
             <span>GIS Analyst &amp; Geospatial Systems Specialist</span>
         </div>
-
-        <p>
-            © <span id="year"></span> Maher Hassan. All rights reserved.
-        </p>
-
+        <p>© <span id="year">2026</span> Maher Hassan. All rights reserved.</p>
     </div>
-
 </footer>
 
 
@@ -685,4 +541,3 @@
 
 </body>
 </html>
-```

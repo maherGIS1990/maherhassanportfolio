@@ -1,4 +1,3 @@
-```javascript
 /* =========================================================
    MAHER HASSAN GIS PORTFOLIO
    JavaScript
@@ -12,42 +11,33 @@ const navMenu = document.getElementById("navMenu");
 
 if (menuToggle && navMenu) {
 
-    menuToggle.addEventListener("click", () => {
+    const setMenuState = (isOpen) => {
 
-        navMenu.classList.toggle("active");
+        navMenu.classList.toggle("active", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
 
         const icon = menuToggle.querySelector("i");
+        icon.classList.toggle("fa-bars", !isOpen);
+        icon.classList.toggle("fa-xmark", isOpen);
 
-        if (navMenu.classList.contains("active")) {
+    };
 
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-xmark");
-
-        } else {
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        }
-
+    menuToggle.addEventListener("click", () => {
+        setMenuState(!navMenu.classList.contains("active"));
     });
 
-
     /* Close menu after clicking a navigation link */
-
     navMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => setMenuState(false));
+    });
 
-        link.addEventListener("click", () => {
-
-            navMenu.classList.remove("active");
-
-            const icon = menuToggle.querySelector("i");
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        });
-
+    /* Close menu on Escape, and return focus to the toggle button */
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && navMenu.classList.contains("active")) {
+            setMenuState(false);
+            menuToggle.focus();
+        }
     });
 
 }
@@ -68,35 +58,32 @@ const revealElements = document.querySelectorAll(
     ".about-card, .skill-card, .project-card, .map-placeholder"
 );
 
-const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
+const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
 
-        entries.forEach(entry => {
+if (revealElements.length && !prefersReducedMotion) {
 
-            if (entry.isIntersecting) {
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.12 }
+    );
 
-                entry.target.classList.add("visible");
+    revealElements.forEach(element => {
+        element.classList.add("reveal");
+        revealObserver.observe(element);
+    });
 
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.12
-    }
-);
-
-
-revealElements.forEach(element => {
-
-    element.classList.add("reveal");
-
-    revealObserver.observe(element);
-
-});
+}
+/* When reduced motion is preferred, elements are left unstyled by
+   "reveal" entirely, so they're simply visible with no animation. */
 
 
 /* ================= PROJECT LINKS ================= */
@@ -132,20 +119,3 @@ revealElements.forEach(element => {
 console.log(
     "Maher Hassan GIS Portfolio — GIS • GeoAI • Spatial Data Science"
 );
-```
-```css
-/* ================= SCROLL REVEAL ================= */
-
-.reveal {
-    opacity: 0;
-    transform: translateY(25px);
-    transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-```
