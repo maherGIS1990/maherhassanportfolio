@@ -1,0 +1,1154 @@
+
+/* =========================================================
+   MAHER HASSAN GIS PORTFOLIO
+   ========================================================= */
+
+:root {
+    --primary: #087f8c;
+    --primary-dark: #05636e;
+    --accent: #20c997;
+
+    --dark: #071820;
+    --dark-2: #0b2530;
+    --text: #16262d;
+    --muted: #64757d;
+
+    --light: #f4f8f9;
+    --white: #ffffff;
+
+    --border: #dce7ea;
+
+    --shadow: 0 20px 50px rgba(7, 24, 32, 0.10);
+
+    --radius: 18px;
+
+    --container: 1180px;
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: min(92%, var(--container));
+    margin: auto;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(220, 231, 234, 0.8);
+}
+
+.nav-container {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.logo-mark {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: var(--dark);
+    color: white;
+
+    font-size: 13px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #40525a;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 700px;
+
+    background:
+        radial-gradient(circle at 80% 20%, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #071820 0%, #0b2934 100%);
+
+    color: white;
+}
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.15;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+
+    background-size: 50px 50px;
+}
+
+.hero-container {
+    min-height: 700px;
+
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 70px;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 8px 13px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: #b7d5da;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 14px rgba(32, 201, 151, 0.8);
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    color: #8ee0d1;
+
+    font-size: clamp(20px, 3vw, 30px);
+    line-height: 1.3;
+
+    margin-bottom: 22px;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    color: #afc1c7;
+
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+
+    margin-top: 32px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 13px 20px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #06231d;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(32, 201, 151, 0.25);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.22);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 35px;
+
+    margin-top: 48px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-size: 22px;
+}
+
+.hero-stats span {
+    color: #8fa8af;
+    font-size: 11px;
+}
+
+
+/* ================= MAP VISUAL ================= */
+
+.map-card {
+    position: relative;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: #102d37;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+
+    transform: rotate(1deg);
+}
+
+.map-toolbar,
+.map-footer {
+    height: 52px;
+
+    padding: 0 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #10252e;
+
+    color: #9bb4bb;
+
+    font-size: 11px;
+}
+
+.map-toolbar span:first-child {
+    color: #d6e8eb;
+    font-weight: 600;
+}
+
+.map-dot {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    margin-left: 4px;
+
+    background: #526d74;
+}
+
+.map-area {
+    position: relative;
+
+    height: 430px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 30% 20%, rgba(32,201,151,0.14), transparent 30%),
+        #12333e;
+}
+
+.map-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.35;
+
+    background-image:
+        linear-gradient(rgba(160,220,215,0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(160,220,215,0.09) 1px, transparent 1px);
+
+    background-size: 42px 42px;
+}
+
+.route {
+    position: absolute;
+
+    height: 4px;
+
+    border-radius: 20px;
+
+    background: #20c997;
+
+    box-shadow: 0 0 15px rgba(32,201,151,0.4);
+}
+
+.route-1 {
+    width: 85%;
+    top: 42%;
+    left: 4%;
+    transform: rotate(-12deg);
+}
+
+.route-2 {
+    width: 65%;
+    top: 62%;
+    left: 20%;
+    transform: rotate(25deg);
+}
+
+.route-3 {
+    width: 60%;
+    top: 28%;
+    left: 25%;
+    transform: rotate(43deg);
+}
+
+.map-point {
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 20px rgba(32,201,151,0.7);
+}
+
+.point-1 {
+    left: 23%;
+    top: 34%;
+}
+
+.point-2 {
+    left: 70%;
+    top: 27%;
+}
+
+.point-3 {
+    left: 56%;
+    top: 68%;
+}
+
+.point-4 {
+    left: 82%;
+    top: 55%;
+}
+
+.map-label {
+    position: absolute;
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    background: rgba(4,20,26,0.75);
+
+    color: #d3e7e9;
+
+    font-size: 9px;
+}
+
+.label-1 {
+    top: 25%;
+    left: 15%;
+}
+
+.label-2 {
+    top: 17%;
+    right: 12%;
+}
+
+.label-3 {
+    bottom: 15%;
+    left: 30%;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 105px 0;
+}
+
+.section-light {
+    background: var(--light);
+}
+
+.section-dark {
+    background: var(--dark);
+    color: white;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 55px;
+}
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-dark .eyebrow {
+    color: var(--accent);
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 16px;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+.section-dark .section-heading p {
+    color: #8fa7ae;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.about-card {
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: white;
+
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 12px;
+
+    background: #e8f7f5;
+
+    color: var(--primary);
+
+    font-size: 20px;
+}
+
+.about-card h3 {
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.skill-card {
+    padding: 27px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    border-radius: var(--radius);
+
+    background: rgba(255,255,255,0.045);
+
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(32,201,151,0.35);
+}
+
+.skill-card i {
+    color: var(--accent);
+
+    font-size: 25px;
+
+    margin-bottom: 18px;
+}
+
+.skill-card h3 {
+    margin-bottom: 7px;
+}
+
+.skill-card p {
+    color: #8ea5ac;
+    font-size: 13px;
+}
+
+.technology-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 35px;
+}
+
+.technology-tags span {
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 999px;
+
+    color: #a8bec4;
+
+    font-size: 11px;
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: white;
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+}
+
+.project-image {
+    position: relative;
+
+    height: 220px;
+
+    overflow: hidden;
+}
+
+.project-image::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+
+    background-size: 30px 30px;
+}
+
+.project-afif {
+    background:
+        radial-gradient(circle at 30% 30%, rgba(32,201,151,0.4), transparent 30%),
+        linear-gradient(135deg, #0b3440, #126879);
+}
+
+.project-geoai {
+    background:
+        radial-gradient(circle at 70% 40%, rgba(32,201,151,0.35), transparent 25%),
+        linear-gradient(135deg, #111c35, #273b72);
+}
+
+.project-qgis {
+    background:
+        radial-gradient(circle at 35% 60%, rgba(255,255,255,0.18), transparent 20%),
+        linear-gradient(135deg, #194d40, #2b8c68);
+}
+
+.project-spatial {
+    background:
+        radial-gradient(circle at 60% 40%, rgba(32,201,151,0.35), transparent 25%),
+        linear-gradient(135deg, #172d39, #34596a);
+}
+
+.project-category {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    background: rgba(4,20,26,0.75);
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.project-content {
+    padding: 27px;
+}
+
+.project-content h3 {
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-bottom: 22px;
+}
+
+.project-tags span {
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    background: #eef5f6;
+
+    color: #4b646c;
+
+    font-size: 10px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ================= MAPS ================= */
+
+.maps-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.map-placeholder {
+    aspect-ratio: 4 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(rgba(8,127,140,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(8,127,140,0.06) 1px, transparent 1px),
+        white;
+
+    background-size: 25px 25px;
+
+    color: #8ba0a7;
+
+    transition: 0.3s ease;
+}
+
+.map-placeholder:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+}
+
+.map-placeholder i {
+    font-size: 27px;
+}
+
+.map-placeholder span {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ================= KNOWLEDGE ================= */
+
+.knowledge {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 60px;
+
+    border-radius: 25px;
+
+    background:
+        radial-gradient(circle at 80% 20%, rgba(32,201,151,0.12), transparent 30%),
+        #eef8f7;
+}
+
+.knowledge h2 {
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+.knowledge p {
+    max-width: 650px;
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+.youtube-card {
+    min-height: 210px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 18px;
+
+    background: #071820;
+
+    color: white;
+
+    text-align: center;
+}
+
+.youtube-card i {
+    color: #ff4f5e;
+    font-size: 55px;
+}
+
+.youtube-card strong {
+    font-size: 20px;
+}
+
+.youtube-card span {
+    color: #8ca4aa;
+    font-size: 11px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    background: var(--dark);
+    color: white;
+}
+
+.contact-box {
+    max-width: 800px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.contact-box .eyebrow {
+    color: var(--accent);
+}
+
+.contact-box h2 {
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+.contact-box p {
+    color: #91a8ae;
+
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+}
+
+.contact-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.contact-links a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 17px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 9px;
+
+    color: #d6e3e6;
+
+    font-size: 12px;
+
+    transition: 0.25s ease;
+}
+
+.contact-links a:hover {
+    background: rgba(255,255,255,0.08);
+
+    border-color: rgba(32,201,151,0.4);
+
+    color: var(--accent);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #041116;
+
+    color: white;
+
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-content div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content strong {
+    font-size: 13px;
+}
+
+.footer-content span,
+.footer-content p {
+    color: #70878e;
+
+    font-size: 10px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        padding-top: 80px;
+    }
+
+    .hero-visual {
+        max-width: 700px;
+        width: 100%;
+
+        margin: auto;
+    }
+
+    .about-grid,
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .maps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .knowledge {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 720px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 76px;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 5% 20px;
+
+        background: white;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 13px 0;
+
+        border-bottom: 1px solid #edf2f3;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .about-grid,
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .maps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .knowledge {
+        padding: 35px 25px;
+    }
+
+    .knowledge h2 {
+        font-size: 32px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .maps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-area {
+        height: 300px;
+    }
+
+}
