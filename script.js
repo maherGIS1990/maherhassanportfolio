@@ -173,6 +173,29 @@ if (afifMapItems.length) {
     });
 }
 
+/* ================= HERO MAP TILT ================= */
+
+const heroMapCard = document.querySelector(".map-card");
+
+if (heroMapCard) {
+    heroMapCard.addEventListener("pointermove", (event) => {
+        const rect = heroMapCard.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+
+        const rotateY = (x - 0.5) * 8;
+        const rotateX = (0.5 - y) * 8;
+
+        heroMapCard.style.setProperty("--rotate-x", `${rotateX}deg`);
+        heroMapCard.style.setProperty("--rotate-y", `${rotateY}deg`);
+    });
+
+    heroMapCard.addEventListener("pointerleave", () => {
+        heroMapCard.style.setProperty("--rotate-x", "0deg");
+        heroMapCard.style.setProperty("--rotate-y", "0deg");
+    });
+}
+
 
 /* ================= CONSOLE MESSAGE ================= */
 
