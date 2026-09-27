@@ -55,7 +55,7 @@ if (yearElement) {
 /* ================= SCROLL REVEAL ================= */
 
 const revealElements = document.querySelectorAll(
-    ".about-card, .skill-card, .project-card, .map-placeholder"
+    ".about-card, .skill-card, .project-card, .map-placeholder, .afif-map-item"
 );
 
 const prefersReducedMotion = window.matchMedia(
@@ -100,18 +100,78 @@ if (revealElements.length && !prefersReducedMotion) {
 */
 
 
-/* ================= MAP PLACEHOLDERS ================= */
+/* ================= AFIF MAP LIGHTBOX ================= */
 
-/*
-   Your eight real maps can later replace the
-   map-placeholder elements.
+const afifMapItems = document.querySelectorAll(".afif-map-item");
 
-   Example:
+if (afifMapItems.length) {
+    const modal = document.createElement("div");
+    modal.className = "lightbox-modal";
+    modal.setAttribute("aria-hidden", "true");
 
-   <img src="assets/maps/map01.jpg"
-        alt="GIS map showing ...">
+    const modalContent = document.createElement("div");
+    modalContent.className = "lightbox-content";
 
-*/
+    const closeButton = document.createElement("button");
+    closeButton.type = "button";
+    closeButton.className = "lightbox-close";
+    closeButton.setAttribute("aria-label", "Close image preview");
+    closeButton.innerHTML = "&times;";
+
+    const lightboxImage = document.createElement("img");
+    lightboxImage.className = "lightbox-image";
+    lightboxImage.alt = "Expanded Afif project map";
+
+    const caption = document.createElement("p");
+    caption.className = "lightbox-caption";
+
+    modalContent.append(closeButton, lightboxImage, caption);
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+
+    const openLightbox = (item) => {
+        const image = item.querySelector("img");
+        const figCaption = item.querySelector("figcaption");
+
+        if (!image || !figCaption) return;
+
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        caption.textContent = figCaption.textContent.trim();
+
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        closeButton.focus();
+    };
+
+    const closeLightbox = () => {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    };
+
+    afifMapItems.forEach((item) => {
+        item.addEventListener("click", () => openLightbox(item));
+        item.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openLightbox(item);
+            }
+        });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("active")) {
+            closeLightbox();
+        }
+    });
+}
 
 
 /* ================= CONSOLE MESSAGE ================= */
