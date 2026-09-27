@@ -5,6 +5,10 @@ Welcome to my GIS and spatial data portfolio. I work with geospatial analysis, A
 ## About Me
 I am a GIS Analyst and Geospatial Systems Specialist focused on turning geographic data into practical, actionable solutions for planning, analysis, mapping, and automation.
 
+## Featured Story Map
+- Geodetic Control Network Densification in Afif: https://arcg.is/1WeOm93
+- This project evaluates coverage gaps, tests Euclidean-distance scenarios, and recommends strategic control points to strengthen the geodetic network efficiently.
+
 ## Contact Information
 - LinkedIn: https://www.linkedin.com/in/maher-hassan-gis
 - Facebook: https://www.facebook.com/profile.php?id=61570489322588&locale=ar_AR
