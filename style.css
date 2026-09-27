@@ -821,6 +821,18 @@ nav a:hover {
     font-weight: 800;
 }
 
+/* Story Maps currently holds a single, verified case study —
+   center it instead of leaving half the 2-column grid empty. */
+#storymaps .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+#storymaps .project-image {
+    height: 260px;
+}
+
 
 /* ================= MAPS ================= */
 
@@ -1014,44 +1026,6 @@ nav a:hover {
 }
 
 .contact-item a:hover {
-    color: var(--accent);
-}
-
-.contact-links {
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-}
-
-.contact-links a {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 9px;
-
-    padding: 11px 17px;
-
-    border: 1px solid rgba(255,255,255,0.12);
-
-    border-radius: 9px;
-
-    color: #d6e3e6;
-
-    font-size: 12px;
-
-    transition: 0.25s ease;
-}
-
-.contact-links a:hover {
-    background: rgba(255,255,255,0.08);
-
-    border-color: rgba(32,201,151,0.4);
-
     color: var(--accent);
 }
 
