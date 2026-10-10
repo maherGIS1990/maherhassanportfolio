@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Analysis in Los Angeles | Maher Hassan</title>
+    <meta name="description" content="Crime analysis and spatial distribution project in Los Angeles by Maher Hassan.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23071820'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='24' font-weight='800' fill='%2320c997' text-anchor='middle'%3EMH%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html#home" class="logo">
+                <span class="logo-mark">MH</span>
+                <span>Maher Hassan</span>
+            </a>
+            <nav aria-label="Secondary navigation">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#storymaps">Story Maps</a>
+                <a href="index.html#maps">Maps</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-detail-hero">
+            <div class="container detail-grid">
+                <div>
+                    <span class="eyebrow">CRIME ANALYSIS • SPATIAL DATA SCIENCE • GIS</span>
+                    <h1>Crime Analysis in Los Angeles</h1>
+                    <p>
+                        A comprehensive spatial analysis of crime patterns in Los Angeles, exploring temporal trends, hotspots, and the distribution of different crime types across districts.
+                    </p>
+                    <div class="project-detail-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Los Angeles, CA</span>
+                        <span><i class="fa-solid fa-map"></i> Spatial analysis & Visualization</span>
+                    </div>
+                    <div class="project-tags detail-tags">
+                        <span>GIS</span>
+                        <span>Spatial Analysis</span>
+                        <span>Los Angeles</span>
+                        <span>Crime Data</span>
+                        <span>Hotspots</span>
+                    </div>
+                    <div class="project-detail-actions">
+                        <a href="index.html#storymaps" class="btn btn-secondary light-btn">
+                            Back to portfolio
+                        </a>
+                    </div>
+                </div>
+
+                <div class="detail-visual">
+                    <img src="Crime analysis/allcrimes2020.png" alt="Los Angeles All Crimes 2020 Map">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="container detail-content">
+                <div class="detail-intro">
+                    <h2>Project objective</h2>
+                    <p>
+                        The primary goal of this project was to visualize and analyze crime data in Los Angeles to identify high-risk areas, understand the spatial distribution of specific crimes like theft, and observe how crime levels changed over time.
+                    </p>
+                </div>
+
+                <div class="detail-grid-two">
+                    <div class="detail-card">
+                        <h3>Methodology</h3>
+                        <ul>
+                            <li>Collected and cleaned crime data for Los Angeles</li>
+                            <li>Mapped spatial distribution of all crimes across the city</li>
+                            <li>Performed hexbin analysis for 2020 to identify density patterns</li>
+                            <li>Analyzed specific crime types like theft and their locations</li>
+                            <li>Evaluated crime distribution across different city districts</li>
+                            <li>Compared crime trends from 2020 through 2022</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3>Key outcome</h3>
+                        <p>
+                            The analysis revealed significant spatial clusters of criminal activity, allowing for a better understanding of neighborhood safety and providing insights that could assist in strategic resource allocation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">PROJECT MAPS</span>
+                    <h2>Spatial analysis results</h2>
+                </div>
+
+                <div class="afif-project-gallery">
+                    <figure class="afif-map-item" tabindex="0" role="button" aria-label="Open study area map">
+                        <img src="Crime analysis/Study area.png" alt="LA Crime Study Area Map">
+                        <figcaption>Study area</figcaption>
+                    </figure>
+                    <figure class="afif-map-item" tabindex="0" role="button" aria-label="Open all crimes 2020 map">
+                        <img src="Crime analysis/allcrimes2020.png" alt="All crimes in LA 2020">
+                        <figcaption>All crimes 2020</figcaption>
+                    </figure>
+                    <figure class="afif-map-item" tabindex="0" role="button" aria-label="Open hexbin 2020 map">
+                        <img src="Crime analysis/Hex_2020.png" alt="Hexbin analysis of crimes in 2020">
+                        <figcaption>Hexbin density 2020</figcaption>
+                    </figure>
+                    <figure class="afif-map-item" tabindex="0" role="button" aria-label="Open theft crimes map">
+                        <img src="Crime analysis/Theft.png" alt="Spatial distribution of theft in LA">
+                        <figcaption>Theft analysis</figcaption>
+                    </figure>
+                    <figure class="afif-map-item" tabindex="0" role="button" aria-label="Open crimes and districts map">
+                        <img src="Crime analysis/Crimes and districts.png" alt="Crimes distributed by districts">
+                        <figcaption>Crimes & Districts</figcaption>
+                    </figure>
+                    <figure class="afif-map-item" tabindex="0" role="button" aria-label="Open crime trends to 2022 map">
+                        <img src="Crime analysis/all crimes to 2022.png" alt="Crime trends from 2020 to 2022">
+                        <figcaption>Trends 2020-2022</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <p>&copy; 2024 Maher Hassan. Built with passion for GIS.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/maher-hassan-gis" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/maherGIS1990" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
